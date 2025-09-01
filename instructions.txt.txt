@@ -1,0 +1,28 @@
+🧬 BioGenie – AI Instagram Bio Generator
+
+Thanks for purchasing BioGenie! Here's how to run it locally:
+
+1. Go to https://openrouter.ai and sign up to get your free API key.
+
+2. In the "backend" folder, open the file named `.env`
+
+3. Paste your API key like this:
+
+OPENROUTER_API_KEY=your_api_key_here
+
+4. In the terminal:
+- Navigate to the "backend" folder
+- Run: npm install
+- Then: node server.js
+
+5. Finally, open "index.html" in your browser and start using BioGenie!
+
+✅ Features:
+- Instant AI-generated bios
+- Hashtag Mode
+- Live Edit
+- Download & Share
+
+💡 Note: This tool runs entirely on your device. Your API key is safe and only used locally.
+
+Enjoy! 🚀

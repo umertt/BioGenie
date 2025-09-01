@@ -1,0 +1,254 @@
+/* Premium Styling for BioGenie */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #1e1e1e;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+main.container {
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(100, 50, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+h1.logo {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: transparent;
+  background: linear-gradient(135deg, #6d90f8, #4f5bd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  letter-spacing: 1.3px;
+  user-select: none;
+  filter: drop-shadow(0 0 6px #4f5bd5cc);
+}
+
+h1 .genie {
+  background: linear-gradient(135deg, #f8c56d, #d58f4f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-style: italic;
+  filter: drop-shadow(0 0 6px #d58f4fcc);
+  transition: filter 0.3s ease;
+}
+
+h1 .genie:hover {
+  filter: drop-shadow(0 0 12px #f9bb3dcc);
+  cursor: default;
+}
+
+.magic-star {
+  font-size: 2.8rem;
+  margin-left: 0.3rem;
+  color: #f9bb3d;
+  text-shadow:
+    0 0 6px #f9bb3d88,
+    0 0 12px #f9bb3daa,
+    0 0 18px #f9bb3dcc;
+  animation: twinkle 3s ease-in-out infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#generateBtn {
+  margin-top: 0.8rem;
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #4f5bd5, #6d90f8);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#generateBtn:hover {
+  background: linear-gradient(135deg, #3a44b0, #4b5cc4);
+  transform: translateY(-2px);
+}
+
+.output-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #121212;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(100, 50, 255, 0.3);
+}
+
+.output-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.bio-output {
+  background: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 1rem;
+  min-height: 100px;
+  border: 1px solid #333;
+  color: #ddd;
+}
+
+.btn-group {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-group button {
+  flex: 1 1 45%;
+  padding: 0.75rem;
+  background: #2d2d2d;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-group button:hover:not(:disabled) {
+  background: #444;
+}
+
+.premium-btn {
+  background: linear-gradient(135deg, #f8c56d, #d58f4f);
+  color: #000;
+  font-weight: 700;
+}
+
+.premium-btn:hover {
+  background: linear-gradient(135deg, #d4a743, #b5752d);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Share dropdown styles */
+
+.share-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.share-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(100, 50, 255, 0.5);
+  padding: 0.6rem 0;
+  width: 140px;
+  z-index: 1000;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.share-menu[hidden] {
+  display: none;
+}
+
+.share-option {
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  text-align: left;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.share-option:hover {
+  background: #4f5bd5;
+  color: #fff;
+}
+
+#shareBtn {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    flex: 1 1 100%;
+  }
+}  
+/* Premium feature label and disabled select styling */
+
+.premium-label {
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #f8c56d;
+}
+
+.premium-select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+

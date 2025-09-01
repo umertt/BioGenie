@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BioGenie ✨ - AI Bio Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="logo">
+      Bio<span class="genie">Genie</span>
+      <span class="magic-star" aria-hidden="true">✨</span>
+    </h1>
+
+    <form id="bioForm" autocomplete="off" class="form">
+      <label for="tone">Select Tone:</label>
+      <select id="tone" name="tone" required>
+        <option value="Professional">Professional</option>
+        <option value="Casual">Casual</option>
+        <option value="Friendly">Friendly</option>
+        <option value="Funny">Funny</option>
+      </select>
+
+      <label for="length">Select Length:</label>
+      <select id="length" name="length" required>
+        <option value="Short">Short</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Long">Long</option>
+      </select>
+
+      <label for="keywords">Enter Keywords (comma separated):</label>
+      <input
+        type="text"
+        id="keywords"
+        name="keywords"
+        placeholder="e.g. AI, developer, gamer"
+        required
+        autocomplete="off"
+      />
+
+      <label for="formatting" class="premium-label">Select Formatting Style:</label>
+      <select id="formatting" name="formatting" class="premium-select">
+        <option value="plain" selected>Plain</option>
+        <option value="emoji">Emoji Mode</option>
+        <option value="hashtag">Hashtag Mode</option>
+        <option value="bullet">Bullet Mode</option>
+      </select>
+
+      <button type="submit" id="generateBtn" class="btn primary-btn">Generate Bio</button>
+    </form>
+
+    <section id="outputSection" aria-live="polite" aria-atomic="true" role="region" class="output-section">
+      <h2>Your Generated Bio</h2>
+      <pre id="bioOutput" tabindex="0" class="bio-output" contenteditable="false">Your bio will appear here...</pre>
+
+      <div class="btn-group" style="position: relative;">
+        <button id="rerollBtn" class="btn secondary-btn" disabled>Re-roll</button>
+        <button id="copyBtn" class="btn secondary-btn" disabled>Copy Bio</button>
+
+        <div class="share-dropdown-wrapper">
+          <button id="shareBtn" class="btn secondary-btn" aria-haspopup="true" aria-expanded="false">Share ▼</button>
+          <div id="shareMenu" class="share-menu" hidden>
+            <button class="share-option" data-platform="twitter" aria-label="Share on Twitter">🐦 Twitter</button>
+            <button class="share-option" data-platform="linkedin" aria-label="Share on LinkedIn">🔗 LinkedIn</button>
+            <button class="share-option" data-platform="facebook" aria-label="Share on Facebook">📘 Facebook</button>
+            <button class="share-option" data-platform="whatsapp" aria-label="Share on WhatsApp">📱 WhatsApp</button>
+          </div>
+        </div>
+
+        <button id="editBtn" class="btn premium-btn" disabled>Edit Bio</button>
+        <button id="saveEditBtn" class="btn premium-btn" hidden>Save</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
